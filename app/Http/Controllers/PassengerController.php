@@ -76,7 +76,7 @@ class PassengerController extends Controller
         $passenger->save();
 
         // Notify passenger
-        $passenger->notify(new PassengerCheckIn($passenger));
+        // $passenger->notify(new PassengerCheckIn($passenger));
 
         return back()->with('success', 'Passenger checked in successfully.');
     }

@@ -104,7 +104,7 @@ class SupportTicketController extends Controller
         }
 
         // Notify ticket owner (passenger)
-        $supportTicket->user->notify(new TicketUpdated($supportTicket));
+        // $supportTicket->user->notify(new TicketUpdated($supportTicket));
 
         return back()->with('success', 'Response added successfully.');
     }

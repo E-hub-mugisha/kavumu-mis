@@ -1,9 +1,9 @@
 @extends('layouts.app')
-@section('title','Admin Dashboard - Reports')
+@section('title','Admin Dashboard')
 @section('content')
 
 <div class="container">
-    <h2 class="mb-4">Admin Dashboard</h2>
+    <h2 class="mb-4">Dashboard</h2>
 
     <!-- Key Metrics -->
     <div class="row mb-4">

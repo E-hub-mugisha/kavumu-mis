@@ -65,72 +65,75 @@
                 </div>
             </div>
 
-            <!-- Edit Airline Modal -->
-            <div class="modal fade" id="editAirlineModal{{ $airline->id }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <form action="{{ route('airlines.update', $airline->id) }}" method="POST" class="modal-content">
-                        @csrf
-                        @method('PUT')
-                        <div class="modal-header">
-                            <h5 class="modal-title">Edit Airline</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <label>Name</label>
-                                <input type="text" name="name" class="form-control" value="{{ $airline->name }}" required>
-                            </div>
-                            <div class="mb-3">
-                                <label>Code</label>
-                                <input type="text" name="code" class="form-control" value="{{ $airline->code }}" required>
-                            </div>
-                            <div class="mb-3">
-                                <label>Country</label>
-                                <input type="text" name="country" class="form-control" value="{{ $airline->country }}">
-                            </div>
-                            <div class="mb-3">
-                                <label>Contact Email</label>
-                                <input type="email" name="contact_email" class="form-control" value="{{ $airline->contact_email }}">
-                            </div>
-                            <div class="mb-3">
-                                <label>Contact Phone</label>
-                                <input type="text" name="contact_phone" class="form-control" value="{{ $airline->contact_phone }}">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button class="btn btn-primary">Save Changes</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Delete Airline Modal -->
-            <div class="modal fade" id="deleteAirlineModal{{ $airline->id }}" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog">
-                    <form action="{{ route('airlines.destroy', $airline->id) }}" method="POST" class="modal-content">
-                        @csrf
-                        @method('DELETE')
-                        <div class="modal-header">
-                            <h5 class="modal-title">Delete Airline</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-                        <div class="modal-body">
-                            Are you sure you want to delete <strong>{{ $airline->name }}</strong>?
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button class="btn btn-danger">Delete</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
 
             @endforeach
         </tbody>
     </table>
 </div>
 
+@foreach($airlines as $airline)
+<!-- Edit Airline Modal -->
+<div class="modal fade" id="editAirlineModal{{ $airline->id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="{{ route('airlines.update', $airline->id) }}" method="POST" class="modal-content">
+            @csrf
+            @method('PUT')
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Airline</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label>Name</label>
+                    <input type="text" name="name" class="form-control" value="{{ $airline->name }}" required>
+                </div>
+                <div class="mb-3">
+                    <label>Code</label>
+                    <input type="text" name="code" class="form-control" value="{{ $airline->code }}" required>
+                </div>
+                <div class="mb-3">
+                    <label>Country</label>
+                    <input type="text" name="country" class="form-control" value="{{ $airline->country }}">
+                </div>
+                <div class="mb-3">
+                    <label>Contact Email</label>
+                    <input type="email" name="contact_email" class="form-control" value="{{ $airline->contact_email }}">
+                </div>
+                <div class="mb-3">
+                    <label>Contact Phone</label>
+                    <input type="text" name="contact_phone" class="form-control" value="{{ $airline->contact_phone }}">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
+@endforeach
+@foreach($airlines as $airline)
+<!-- Delete Airline Modal -->
+<div class="modal fade" id="deleteAirlineModal{{ $airline->id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="{{ route('airlines.destroy', $airline->id) }}" method="POST" class="modal-content">
+            @csrf
+            @method('DELETE')
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Airline</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete <strong>{{ $airline->name }}</strong>?
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>
+@endforeach
 <!-- Add Airline Modal -->
 <div class="modal fade" id="addAirlineModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
