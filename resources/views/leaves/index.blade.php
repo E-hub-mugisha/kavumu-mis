@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Leave Requests')
+@section('title', 'Leave')
 
 @section('content')
 <div class="container-fluid py-4">
     <div class="d-flex justify-content-between mb-3">
-        <h4 class="fw-bold">Leave Requests</h4>
+        <h4 class="fw-bold">Leave request</h4>
         <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addLeaveModal">
             <i class="mdi mdi-plus"></i> Add Leave
         </button>
@@ -27,7 +27,7 @@
                     <tr>
                         <th>#</th>
                         <th>Staff</th>
-                        <th>Leave Type</th>
+                        <th>Leave RequestType</th>
                         <th>Dates</th>
                         <th>Reason</th>
                         <th>Status</th>
@@ -76,12 +76,12 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header bg-info text-white">
-                                    <h5 class="modal-title">Leave Details</h5>
+                                    <h5 class="modal-title">Leave RequestDetails</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
                                 <div class="modal-body">
                                     <p><strong>Staff:</strong> {{ $leave->staff->name ?? 'N/A' }}</p>
-                                    <p><strong>Leave Type:</strong> {{ $leave->leave_type }}</p>
+                                    <p><strong>Leave RequestType:</strong> {{ $leave->leave_type }}</p>
                                     <p><strong>Start Date:</strong> {{ $leave->start_date }}</p>
                                     <p><strong>End Date:</strong> {{ $leave->end_date }}</p>
                                     <p><strong>Reason:</strong> {{ $leave->reason }}</p>
@@ -103,7 +103,7 @@
                                     @csrf @method('PUT')
                                     <div class="modal-body">
                                         <div class="mb-3">
-                                            <label for="leave_type" class="form-label">Leave Type</label>
+                                            <label for="leave_type" class="form-label">Leave RequestType</label>
                                             <select name="leave_type" id="leave_type" class="form-control" required>
                                                 @php
                                                 $types = ['Annual','Sick','Casual','Maternity','Paternity','Bereavement','Unpaid','Study','Compensatory'];
@@ -153,7 +153,7 @@
                                 <form action="{{ route('leave-requests.destroy', $leave->id) }}" method="POST">
                                     @csrf @method('DELETE')
                                     <div class="modal-body">
-                                        Are you sure you want to delete this leave request?
+                                        Are you sure you want to delete this Leave Requestrequest?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -165,7 +165,7 @@
 
                     @empty
                     <tr>
-                        <td colspan="7" class="text-center">No leave requests found.</td>
+                        <td colspan="7" class="text-center">No Leave Requestfound.</td>
                     </tr>
                     @endforelse
                 </tbody>
@@ -180,7 +180,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">Add Leave Request</h5>
+                <h5 class="modal-title">Add Leave RequestRequest</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <form action="{{ route('leave-requests.store') }}" method="POST">
@@ -196,7 +196,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="leave_type" class="form-label">Leave Type</label>
+                        <label for="leave_type" class="form-label">Leave RequestType</label>
                         <select name="leave_type" id="leave_type" class="form-control" required>
                             <option value="Annual">Annual</option>
                             <option value="Sick">Sick</option>

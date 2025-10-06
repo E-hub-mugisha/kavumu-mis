@@ -75,14 +75,7 @@
                                 <input type="password" class="form-control form-control-lg border-left-0" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
                             </div>
                         </div>
-                        <div class="my-2 d-flex justify-content-between align-items-center">
-                            <div class="form-check">
-                                <label class="form-check-label text-muted">
-                                    <input id="remember_me" type="checkbox" name="remember" class="form-check-input">
-                                    I agree to all Terms & Conditions
-                                </label>
-                            </div>
-                        </div>
+                        
                         <div class="my-3">
                             <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Register</button>
                         </div>

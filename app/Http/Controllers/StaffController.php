@@ -20,13 +20,13 @@ class StaffController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email',
-            'phone' => 'nullable|string|max:20',
-            'position' => 'required|string|max:100',
-            'department' => 'nullable|string|max:100',
-            'hire_date' => 'nullable|date',
-            'status' => 'required|in:Active,Inactive',
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'nullable',
+            'position' => 'required',
+            'department' => 'nullable',
+            'hire_date' => 'nullable',
+            'status' => 'required',
         ]);
 
         // Generate a random 10-character password

@@ -6449,7 +6449,7 @@ var menu = $.widget( "ui.menu", {
 				this.focus( event, target );
 			},
 			mouseleave: "collapseAll",
-			"mouseleave .ui-menu": "collapseAll",
+			"mouseLeave Request.ui-menu": "collapseAll",
 			focus: function( event, keepActiveItem ) {
 				// If there's already an active item, keep it active
 				// If not, activate the first item
@@ -8085,7 +8085,7 @@ function Datepicker() {
 		yearRange: "c-10:c+10", // Range of years to display in drop-down,
 			// either relative to today's year (-nn:+nn), relative to currently displayed year
 			// (c-nn:c+nn), absolute (nnnn:nnnn), or a combination of the above (nnnn:-n)
-		showOtherMonths: false, // True to show dates in other months, false to leave blank
+		showOtherMonths: false, // True to show dates in other months, false to Leave Requestblank
 		selectOtherMonths: false, // True to allow selection of dates in other months, false for unselectable
 		showWeek: false, // True to show week of the year, false to not show it
 		calculateWeek: this.iso8601Week, // How to calculate the week of the year,
@@ -8112,7 +8112,7 @@ function Datepicker() {
 		altFormat: "", // The date format to use for the alternate field
 		constrainInput: true, // The input is constrained by the current date format
 		showButtonPanel: false, // True to show button panel, false to not show it
-		autoSize: false, // True to size the input for the date format, false to leave as is
+		autoSize: false, // True to size the input for the date format, false to Leave Requestas is
 		disabled: false // The initial disabled state
 	};
 	$.extend(this._defaults, this.regional[""]);
@@ -8296,7 +8296,7 @@ $.extend(Datepicker.prototype, {
 	 * @param  settings  object - update the dialog date picker instance's settings (anonymous object)
 	 * @param  pos int[2] - coordinates for the dialog's position within the screen or
 	 *					event - with x/y coordinates or
-	 *					leave empty for default (screen centre)
+	 *					Leave Requestempty for default (screen centre)
 	 * @return the manager object
 	 */
 	_dialogDatepicker: function(input, date, onSelect, settings, pos) {
@@ -12534,7 +12534,7 @@ var spinner = $.widget( "ui.spinner", {
 		},
 		"mouseup .ui-spinner-button": "_stop",
 		"mouseenter .ui-spinner-button": function( event ) {
-			// button will add ui-state-active if mouse was down while mouseleave and kept down
+			// button will add ui-state-active if mouse was down while mouseLeave Requestand kept down
 			if ( !$( event.currentTarget ).hasClass( "ui-state-active" ) ) {
 				return;
 			}
@@ -12547,7 +12547,7 @@ var spinner = $.widget( "ui.spinner", {
 		// TODO: do we really want to consider this a stop?
 		// shouldn't we just stop the repeater and wait until mouseup before
 		// we trigger the stop event?
-		"mouseleave .ui-spinner-button": "_stop"
+		"mouseLeave Request.ui-spinner-button": "_stop"
 	},
 
 	_draw: function() {

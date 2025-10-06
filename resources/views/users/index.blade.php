@@ -66,7 +66,7 @@
                                         <input type="email" name="email" class="form-control" value="{{ $user->email }}" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label>Password (leave blank to keep current)</label>
+                                        <label>Password (Leave Requestblank to keep current)</label>
                                         <input type="password" name="password" class="form-control">
                                     </div>
                                     <div class="mb-3">

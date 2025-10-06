@@ -23,12 +23,18 @@ class LeaveRequestController extends Controller
             'leave_type' => 'required'
         ]);
         LeaveRequest::create($request->all());
-        return back()->with('success','Leave request submitted.');
+        return back()->with('success','Leave Requestrequest submitted.');
     }
 
     public function update(Request $request, LeaveRequest $leaveRequest) {
         $request->validate(['status' => 'required|in:Pending,Approved,Rejected']);
         $leaveRequest->update(['status'=>$request->status]);
-        return back()->with('success','Leave request updated.');
+        return back()->with('success','Leave Requestrequest updated.');
+    }
+
+    public function destroy(LeaveRequest $leaveRequest)
+    {
+        $leaveRequest->delete();
+        return back()->with('success', 'LeaveRequest record deleted successfully.');
     }
 }
