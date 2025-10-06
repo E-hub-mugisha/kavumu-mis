@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <!-- Role Selection -->
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="role">Select Role</label>
                             <div class="input-group">
                                 <div class="input-group-prepend bg-transparent">
@@ -52,7 +52,7 @@
                                     <option value="Admin">Admin</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="exampleInputPassword">Password</label>
                             <div class="input-group">
