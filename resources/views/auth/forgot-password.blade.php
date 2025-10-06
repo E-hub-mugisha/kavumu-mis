@@ -8,7 +8,7 @@
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 <div class="auth-form-transparent text-left p-3">
                     <div class="brand-logo">
-                        <img src="{{ asset('assets/images/logo-dark.svg')}}" alt="logo">
+                        {{ config('app.name')}}
                     </div>
                     <h4>Forgot Your Password!</h4>
                     <h6 class="font-weight-light">Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.</h6>

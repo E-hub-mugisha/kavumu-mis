@@ -8,7 +8,7 @@
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 <div class="auth-form-transparent text-left p-3">
                     <div class="brand-logo">
-                        <img src="{{ asset('assets/images/logo-dark.svg')}}" alt="logo">
+                        {{ config('app.name')}}
                     </div>
                     <h4>Welcome back!</h4>
                     <h6 class="font-weight-light">Happy to see you again!</h6>

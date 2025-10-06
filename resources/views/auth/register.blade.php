@@ -8,7 +8,7 @@
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
                 <div class="auth-form-transparent text-left p-3">
                     <div class="brand-logo">
-                        <img src="{{ asset('assets/images/logo-dark.svg')}}" alt="logo">
+                        {{ config('app.name')}}
                     </div>
                     <h4>New here?</h4>
                     <h6 class="font-weight-light">Join us today! It takes only few steps</h6>
@@ -34,6 +34,23 @@
                                     </span>
                                 </div>
                                 <input type="email" name="email" class="form-control form-control-lg border-left-0" id="email" placeholder="Email" :value="old('email')" required autofocus autocomplete="email">
+                            </div>
+                        </div>
+                        <!-- Role Selection -->
+                        <div class="form-group">
+                            <label for="role">Select Role</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend bg-transparent">
+                                    <span class="input-group-text bg-transparent border-right-0">
+                                        <i class="mdi mdi-account-key text-primary"></i>
+                                    </span>
+                                </div>
+                                <select name="role" id="role" class="form-control form-control-lg border-left-0" required>
+                                    <option value="" disabled selected>-- Choose Role --</option>
+                                    <option value="Passenger">Passenger</option>
+                                    <option value="Staff">Staff</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">

@@ -82,9 +82,13 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="https://www.bootstrapdash.com/product/spica-admin/">
-                <button class="btn bg-danger btn-sm menu-title">Log out</button>
-            </a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="{{ route('logout')}}" class="btn bg-danger btn-sm menu-title" onclick="event.preventDefault(); this.closest('form').submit();">
+                    Log out
+                </a>
+            </form>
         </li>
+
     </ul>
 </nav>
